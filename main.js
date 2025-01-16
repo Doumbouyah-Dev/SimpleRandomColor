@@ -15,6 +15,7 @@ const b = Math.floor(Math.random() * 255);
 //loop over the divs to apply addEventListener
 for (let button of buttons) {
 button.addEventListener('click', newColors);
+
 };
 
 // loop over the h1s to apply addEventListener
@@ -28,4 +29,10 @@ function newColors() {
   this.style.backgroundColor = colorGenerator();
   this.style.backgroundColor = colorGenerator();
   this.style.color = colorGenerator();
+  this.style.boxShadow = `5px -5px ${colorGenerator()}`;
+this.style.border = `3px solid ${colorGenerator()}`
 }
+//Adding random color to the background of the body
+document.body.addEventListener('click', () => {
+  document.body.style.backgroundColor = `${colorGenerator()}`
+}) 
